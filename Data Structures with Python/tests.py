@@ -8,5 +8,5 @@ print(data[pos:pos+3])
 
 text = "X-DSPAM-Confidence:    0.8475"
 textmod = text.find('.')
-print(textmod)
+
 print(float(text[24:30]))

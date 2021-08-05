@@ -7,30 +7,23 @@ largest = None
 smallest = None
 while True:
     num = input("Enter a number: ")
-    if num == 'done':
-        for itervar in num:
-            if largest is None : 
-                largest = itervar
-            elif itervar > largest:
-                largest = itervar    
-        for itervar2 in num:        
-            if smallest is None: 
-                smallest = itervar
-            elif itervar <  smallest:
-                smallest = itervar
+    if num == 'done' :
         break
-    else:
-        try:
-            num = float(num) and num != 'done'
-        except:
-            print("Invalid input")    
-            exit()
-        
-        
-                 
-        print(largest, smallest)
-        
-       
+    try:
+        numint = int(num)
+        if smallest is None :
+            smallest = numint
+        elif numint < smallest :
+            smallest = numint
+        if largest is None :
+            largest = numint
+        elif numint > largest :
+            largest = numint
+    except:
+         print("Invalid input")
+    continue
+print("Maximum is", largest)
+print("Minimum is", smallest)
     
     
 
